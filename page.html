@@ -185,7 +185,7 @@
         <h2>The Answer</h2>
         <h3>Isi Aja Mau/Engga. Ketika Kamu Kirim Otomatis Diarahin ke wa terus tinggal kirim di wanya gausah ngetik lagi</h3>
         <form id="whatsappForm">
-            <textarea id="whatsappAnswer" placeholder="Tulis jawaban kamu di sini..." required></textarea>
+            <textarea id="whatsappAnswer" placeholder="Tulis jawaban kamu di sini... Tolong Yah Isi Apapun Jawaban kamu its secret ga akan aku umbar, when its done its done, when continue then continue" required></textarea>
             <button type="button" onclick="sendToWhatsApp()">Kirim ke WhatsApp</button>
         </form>
     
@@ -193,7 +193,7 @@
         function sendToWhatsApp() {
             const answer = document.getElementById("whatsappAnswer").value;
             if (answer.trim() === "") {
-                alert("Jawaban tidak boleh kosong.");
+                alert("Tolong banget ini mah isi");
                 return;
             }
             const phone = "6289517024690"; // Ganti dengan nomor WhatsApp tujuan
