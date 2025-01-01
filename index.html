@@ -114,6 +114,8 @@
             width: 100%;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.1s ease; /* Smooth rotation */
+            transform-style: preserve-3d;
         }
 
         .password-container {
@@ -189,6 +191,8 @@
 
             <p class="hint" id="hint1">Hint: Ulang Tahun Kamu! 🎉 [Formatnya Isian nya 00-00-0000 , Tanggal-Bulan-Tahun] </p>
             <p class="hint" id="hint2" style="display:none;">Hint: Berpikir Tentang Ulang Tahun Seseorang 💕</p>
+            <p class="hint" id="hint3" style="display:none;">Hint: Yang Pernah Botak 👨🏻‍🦲 Terus Jalan. Awas Aja Gatau Keneh 💕</p>
+            <p class="hint" id="hint4" style="display:none;">Hint: Yaudah Deh Nih Passwordnya 23-09-2005</p>
         </div>
 
         <div class="photo-grid" id="photo-grid">
@@ -202,13 +206,13 @@
             <img src="assets/IMG-20230812-WA0033.jpg" alt="Photo 8">
             <img src="assets/IMG-20230812-WA0045.jpg" alt="Photo 9">
         </div>
-
+        
         <div class="music" id="music">
             <p>Enjoy this music while you look through the photos:</p>
             <audio controls autoplay>
                 <source src="assets/Glue Song (feat. Clairo).mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
             </audio>
+            <a href="page.html" class="btn" onclick="">Klik Ini Yaahhh</a>
         </div>
     </div>
 
@@ -240,7 +244,7 @@
                 if (firstAttempt === 3) {
                     document.getElementById('hint1').style.display = 'block';
                 } else {
-                    alert('Salah Tau Wle🥴');
+                    alert('Salah Tau Wle🥴 (Nanti Dapet Hint Kalau 3 kali Salah)');
                 }
             }
         }
@@ -254,10 +258,16 @@
                 secondAttempt = 0;
             } else {
                 secondAttempt++;
-                if (secondAttempt === 3) {
+                if (secondAttempt === 1) {
                     document.getElementById('hint2').style.display = 'block';
-                } else {
-                    alert('Eh bukan yang itu tauuukkkkk😡');
+                }if (secondAttempt === 2){
+                    document.getElementById('hint3').style.display = 'block';
+                }
+                if (secondAttempt === 3){
+                    document.getElementById('hint4').style.display = 'block';
+                }
+                else {
+                    alert('Eh bukan yang itu tauuukkkkk😡(3 kali salah jawab dapet hint lagi di bawah)');
                 }
             }
         }
