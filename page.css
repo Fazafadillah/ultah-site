@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: #ff6f61;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Section */
+.content {
+    padding: 20px;
+}
+
+/* Containers */
+.container {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 2em;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#playMusicButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#playMusicButton:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Heart Animation */
+.heart {
+    font-size: 50px;
+    color: #ff6f61;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Answer Form */
+.answer-form h2 {
+    font-size: 1.8em;
+    color: #ff6f61;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.answer-form h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#whatsappForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#whatsappAnswer {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    resize: none;
+    font-family: 'Arial', sans-serif;
+}
+
+#whatsappForm button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#whatsappForm button:hover {
+    background: #ff8a75;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.btn{
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff6f61;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}

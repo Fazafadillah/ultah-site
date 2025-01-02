@@ -4,224 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .container h1 {
-            font-size: 2.5em;
-            color: #ff6f61;
-            margin-bottom: 10px;
-        }
-
-        .container p {
-            font-size: 1.2em;
-            color: #444;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #ff6f61;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #ff8a75;
-        }
-
-        .heart {
-            font-size: 50px;
-            color: #ff6f61;
-            animation: beat 1s infinite;
-        }
-
-        @keyframes beat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-        }
-
-        .surprise {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .surprise img {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .surprise p {
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        .extra-container {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .extra-container h2 {
-            font-size: 2em;
-            color: #ff6f61;
-            margin-bottom: 10px;
-        }
-
-        .extra-container p {
-            font-size: 1.2em;
-            color: #444;
-        }
-
-        .photo-grid {
-            display: none;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .photo-grid img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.1s ease; /* Smooth rotation */
-            transform-style: preserve-3d;
-        }
-
-        .password-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .password-container input {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .password-container button {
-            padding: 10px 20px;
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .password-container button:hover {
-            background-color: #ff8a75;
-        }
-
-        .hint {
-            display: none;
-            color: red;
-            font-size: 1em;
-            margin-top: 10px;
-        }
-
-        .music {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .music audio {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="page.css">
 </head>
 <body>
-    <div class="container">
+    <header class="header">
         <h1>Fix Or Not</h1>
-        <p>Hai , ini bisa jadi last long text aku, bisa jadi engga,
-        aku tau ini udah kesekisan kalinya kita kaya gini, kalo kamu tau aku silent juga aku orangnya penasaran
-        maka dari itu apakah kamu mau untuk kembali lagi dalam hubungan ini? , kalau pun iya aku pengen sekali ini juga
-        aku pengen kamu chat duluan ke aku, bukan karena aku masih mempertahankan kata kata aku kemaren, bukan karena gengsi atau apapun
-        tapi aku pengen sekali aja liat ketika kita lagi berantem kamu duluan inisiatif buat memperbaiki, hubungan bukan hanya dijalani oleh satu
-        orang , aku disini ngeliat kalo kita lagi berantem kayanya aku deh yang mau stay kamu kaya gamau tau dan gapeduli karena cape, ik pasti tapi cape kalo kita ga ego
-        entah apa yang nyantol di hati dan dipikiran aku setiap kali kita mau udahan ataupun udahan aku selalu kepikiran kamu, dan juga aku sekalipun gapernah jalan sama someone new
-        apalagi text someone i swear to god
-        </p>
-        <div class="heart">❤️</div>
-    </div>
+        <p>Explore and answer honestly. Your feedback matters!</p>
+    </header>
 
-    <div class="container">
-        <h1>Aku Nulis Ini di tanggal 1</h1>
-        <p>Sedari kita asing tepatnya di tanggal 29 kemaren sampai hari ini di buka website nya, kamu buat hal ngapain, apa kamu nunggu aku? ataukah kamu udah deketin cowo baru? , kalo pun iya congrats ya, kalo aku sendiri aku masih melakukan hal yang aku kasih tau sama kamu , aku ngelakuin beres beres rumah terus ngebuat cheatsheet buat uas, kadang keluar , keluar pun main sama cowo lah entah itu aa aku ataupun main sama temen, yang lebih penting aku udah nyiapin buat tanggal 16 kamu aku udah nyiapin semuanya segalanya dari kado ,
-        kue ulang tahun udah aku siapin uang nya,buket udah ada uangnya, tinggal aku ngasih ini bakalan sama aku langsung atau engga heheh, keliatan nya pengecut yah
-        </p>
-        <div class="heart">💜</div>
-    </div>
+    <main class="content">
 
-    <div class="container">
-        <h1>Aku Nulis Ini di tanggal 2</h1>
-        <p>mungkin ini sebagai acuan aja kita lanjut apa engga, kalo dari aku yah , selama asing tersebut aku ga ngelupain kamu, aku cuman ngefokusin hal yg lebih aku pentingin dulu, maksud aku disini aku tuh pengen ketika aku sibuk kamu ngerti aku emang lagi fokus disitu dan ga bakal kemana mana ibaratkan aku mau ngerantau percaya tunggu aku pasti pulang , dan aku mikirnya ngefokusin uas yang cuman seminggu lebih better karena kamu pasti bakalan aku ketemu in lagi </p>
-        <div class="heart">💙</div>
-    </div>
+        
+        <section class="container">
+            <audio id="backgroundMusic" loop preload="auto">
+            <source src="assets/hbdpiano.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+            <button id="playMusicButton">Play Music</button>
+        </section>
+        
+        <!-- Container Section -->
+        <section class="container">
+            <h1>Aku Nulis Ini di tanggal 1</h1>
+            <p>Hai , ini bisa jadi last long text aku, bisa jadi engga,
+                aku tau ini udah kesekisan kalinya kita kaya gini, kalo kamu tau aku silent juga aku orangnya penasaran
+                maka dari itu apakah kamu mau untuk kembali lagi dalam hubungan ini? , kalau pun iya aku pengen sekali ini aja
+                aku pengen kamu chat duluan ke aku, bukan karena aku masih mempertahankan kata kata aku kemaren, bukan karena gengsi atau apapun
+                tapi aku pengen sekali aja liat ketika kita lagi berantem kamu duluan inisiatif buat memperbaiki, hubungan bukan hanya dijalani oleh satu
+                orang , aku disini ngeliat kalo kita lagi berantem kayanya aku deh yang mau stay kamu kaya gamau tau dan gapeduli karena cape, ik pasti tapi cape kalo kita ga ego (aku ngomong gini kaya yang ga ego aja cuih wkwk)
+                entah apa yang nyantol di hati dan dipikiran aku setiap kali kita mau udahan ataupun udahan aku selalu kepikiran kamu, dan juga aku sekalipun gapernah jalan sama someone new
+                apalagi text someone i swear to god</p>
+            <div class="heart">❤️</div>
+            
+        </section>
 
-    <div class="container">
-        <h1>Aku Nulis Ini di tanggal 2</h1>
-        <p>dan ini asumsi aku ke kamu selama yang aku lihat yah, aku ga diem juga aku ngeliat semuanya di tanggal 31 ke tanggal 1 kemaren kamu keluar aku gatau kamu kemana , aku bukan maksud ga ngelarang tapi asumsi aku kayaknya kamu berusaha melupakan aku aja, dan aku setiap main ig dan aku benci banget sekarang main ig karena kamu ngelike postingan postingan yang buat aku ga seharusnya ngebuat seneng tapi malah kaya ko gini, dia maunya gitu kah ketika gini teh</p>
-        <div class="heart">😢</div>
-    </div>
+        <section class="container">
+            <h1>Aku Nulis Ini di tanggal 2</h1>
+            <p>Sedari kita asing tepatnya di tanggal 29 kemaren sampai hari ini di buka website nya, kamu buat hal apa aja nih, apa kamu nunggu aku? ataukah kamu udah deketin cowo baru? , kalo pun iya congrats ya, kalo aku sendiri aku masih melakukan hal yang aku kasih tau sama kamu , aku ngelakuin beres beres rumah terus ngebuat cheatsheet buat uas, kadang keluar , keluar pun main sama cowo lah entah itu aa aku ataupun main sama temen, yang lebih penting aku udah nyiapin buat tanggal 16 kamu aku udah nyiapin semuanya segalanya dari kado ,
+                kue ulang tahun udah aku siapin uang nya,buket udah ada uangnya, tinggal aku ngasih ini bakalan sama aku langsung atau engga heheh, keliatan nya pengecut yah</p>
+            <div class="heart">💙</div>
+        </section>
 
-    <div class="container">
-        <h1>Aku Nulis Ini di tanggal 3</h1>
-        <p>Kalo pengen tau mah di percintaan aku selama ini, ini yang paling lama jujur, dan selama aku di hubungan dengan sebelumnya aku ga pernah berani satu langkah pun ke sesuatu yang namanua selingkuh , karena aku udah pernah ngerasain diselingkuhin , dan di dalam hubungan aku selalu naruh kepercayaan aku jadi kalo ada sesuatu yang nyepelein aku sakit hati</p>
-        <div class="heart">🤝☝️</div>
-    </div>
+        <section class="container">
+            <h1>Aku Nulis Ini di tanggal 3</h1>
+            <p>mungkin ini sebagai acuan aja kita lanjut apa engga, kalo dari aku yah ,
+                selama asing tersebut aku ga ngelupain kamu, 
+                aku cuman ngefokusin hal yg lebih aku pentingin dulu, maksud aku disini aku tuh pengen ketika aku sibuk kamu ngerti aku emang lagi fokus disitu
+                dan ga bakal kemana mana ibaratkan aku mau ngerantau percaya tunggu aku pasti pulang ,
+                dan aku mikirnya ngefokusin uas yang cuman seminggu lebih better karena kamu pasti bakalan aku ketemu in lagi
+                gimana kalo misalkan nanti kalo kita memang lanjut terus , pasti banyak kesibukan lain terus kamu emang tipikal gamau ditinggal</p>
+            <div class="heart">😢</div>
+        </section>
 
-    <div class="container">
-        <h1>Aku Nulis Ini di tanggal 3</h1>
-        <p>Sekarang Dibawah ada jawaban , mau lanjut apa engga, tolong jawab yah, kalo gamau hmm plis sekali ini aja aku minta kelanjutan nya gimana dari kamu ke aku, bilang seadanya kalo misal mau lanjut ayo kalo engga ya engga , kalo misal dah punya yang baru ya bilang</p>
-        <div class="heart">☺️</div>
-    </div>
+        <section class="container">
+            <div class="heart">🥳🤩</div>
+            <h1>Last Paraghraph</h1>
+            <p>
+                Selamat Ulang Tahun Yang Ke 19 Sayangkuh Duniakuh Cingtakuh Zashkieya Rachmadinuellahku, Semoga doa atau harapan yang sebelumnya kamu
+                panjatkan belum terwujud semoga di tahun ini doa dan harapan tersebut terwujud, dan juga panjang umur, banjir rezeki, kalau pun seandainya sekarang udah
+                ada yang baru sekali lagi congrats berarti ini perpisahan tapi dibawah ini ada isian jawab aja yah please (seandainya kan yah)
+            </p>
+        </section>
 
-    <div class="container">
-        <h2>The Answer</h2>
-        <h3>Isi Aja Mau/Engga/Udah Dapat Yang Baru. Ketika Kamu Kirim Otomatis Diarahin ke wa terus tinggal kirim di wanya gausah ngetik lagi</h3>
-        <form id="whatsappForm">
-            <textarea id="whatsappAnswer" placeholder="Tulis jawaban kamu di sini... Tolong Yah Isi Apapun Jawaban kamu its secret ga akan aku umbar, when its done its done, when continue then continue, lalu kalo kamu udah punya bilang aja" required></textarea>
-            <button type="button" onclick="sendToWhatsApp()">Kirim ke WhatsApp</button>
-        </form>
+        <section class="container">
+        <!-- Answer Form Section -->
+        <section class="answer-form">
+            <h2>The Answer</h2>
+            <h3>Isi Aja Mau/Engga/Udah Dapat Yang Baru</h3>
+            <h4>Tinggal di isi terus kirim, otomatis diarahin ke WhatsApp nya, di WhatsApp tinggal kirim gausah cape ketik lagi</h4>
+            <form id="whatsappForm">
+                <textarea id="whatsappAnswer" placeholder="Tulis jawaban kamu di sini..." required></textarea>
+                <button type="button" onclick="sendToWhatsApp()">Kirim ke WhatsApp</button>
+            </form>
+        </section>
+        <h3>Dibawah Ada Game Bisi Mau Main Game Dulu</h3>
+        <a href="jj.html" class="btn">Game</a>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <p>Made with ❤️ for someone special</p>
+    </footer>
     
-        <script>
+
+    <script>
+       document.getElementById("playMusicButton").addEventListener("click", function () {
+        const audio = document.getElementById("backgroundMusic");
+        audio.play()
+            .then(() => {
+                console.log("Music is playing");
+            })
+            .catch(error => {
+                console.log("Error playing music: ", error);
+            });
+    });
+
         function sendToWhatsApp() {
             const answer = document.getElementById("whatsappAnswer").value;
             if (answer.trim() === "") {
@@ -232,67 +109,6 @@
             const message = encodeURIComponent(answer);
             window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
         }
-        </script>
-    
-        <style>
-            /* Styling untuk container */
-            .container {
-                background: linear-gradient(135deg, #ffe1b7, #ff9a9e);
-                padding: 20px;
-                border-radius: 15px;
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-                text-align: center;
-                max-width: 600px;
-                margin: 20px auto;
-            }
-    
-            /* Judul */
-            .container h2 {
-                font-size: 2em;
-                color: #ff6f61;
-                margin-bottom: 15px;
-            }
-    
-            /* Form Styling */
-            #whatsappForm {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-    
-            /* Textarea Styling */
-            #whatsappAnswer {
-                width: 100%;
-                max-width: 500px;
-                height: 100px;
-                padding: 10px;
-                font-size: 1em;
-                border: 1px solid #ccc;
-                border-radius: 10px;
-                box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
-                margin-bottom: 15px;
-                resize: none;
-                font-family: 'Arial', sans-serif;
-            }
-    
-            /* Button Styling */
-            #whatsappForm button {
-                background: #ff6f61;
-                color: white;
-                border: none;
-                border-radius: 10px;
-                padding: 10px 20px;
-                font-size: 1em;
-                cursor: pointer;
-                transition: all 0.3s;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            }
-    
-            #whatsappForm button:hover {
-                background: #ff8a75;
-                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-            }
-        </style>
-    </div>
+    </script>
 </body>
 </html>
