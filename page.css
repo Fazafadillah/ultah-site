@@ -76,6 +76,21 @@ body {
     }
 }
 
+.cake {
+    font-size: 150px;
+    color: #ff6f61;
+    animation: cake 1s infinite;
+}
+
+@keyframes cake {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
 /* Answer Form */
 .answer-form h2 {
     font-size: 1.8em;

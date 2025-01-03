@@ -15,8 +15,12 @@
         <h1>Happy Birthday, My Love! 🎉</h1>
         <p>You make my world brighter and my heart lighter. Wishing you all the joy you deserve today and always!</p>
         <div class="heart">❤️</div>
-        <button class="btn" onclick="showSurprise()">Click for a Surprise</button>
-        <audio id="click-sound" src="assets/hppy.mp3"></audio>
+        <button class="btn" id="playMusicButton" onclick="showSurprise()">Click for a Surprise</button>
+        <audio id="click-sound" loop preload="auto">
+            <source src="assets/hppy.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- <audio id="click-sound" src="assets/hppy.mp3"></audio> -->
         <div id="confetti" class="confetti"></div>
         <div class="surprise" id="surprise">
             <img src="assets/IMG-20230415-WA0023.jpg" alt="Happy Birthday">
@@ -32,7 +36,7 @@
             <p class="hint" id="hint1">Hint: Ulang Tahun Kamu! 🎉 [Formatnya Isian nya 00-00-0000 , Tanggal-Bulan-Tahun] </p>
             <input type="input" id="password1" placeholder="Enter first password">
             <button onclick="checkFirstPassword()">Submit First Password</button>
-            <audio id="click-sound" src="assets/hppy.mp3"></audio>
+            <audio id="correct-sound" src="assets/bener.mp3"></audio>
             <audio id="wrong-sound" src="assets/salah.mp3"></audio>
 
 
@@ -41,8 +45,8 @@
             <p class="hint" id="hint4" style="display:none;">Hint: Yaudah Deh Nih Passwordnya 23-09-2005</p>
             <input type="input" id="password2" placeholder="Enter second password" style="display:none;">
             <button onclick="checkSecondPassword()" id="second-button" style="display:none;">Submit Second Password</button>
-            <audio id="click-sound" src="assets/hppy.mp3"></audio>
-            <audio id="wrong-sound" src="assets/salah.mp3"></audio>
+            <!-- <audio id="correct-sound" src="assets/bener.mp3"></audio>
+            <audio id="wrong-sound" src="assets/salah.mp3"></audio> -->
         </div>
 
         <div class="photo-grid" id="photo-grid">
@@ -83,10 +87,21 @@
         let secondAttempt = 0;
         const clickSound = document.getElementById('click-sound');
         const wrongSound = document.getElementById('wrong-sound');
+        const correctSound = document.getElementById('correct-sound');
 
 
 
         function showSurprise() {
+            document.getElementById("playMusicButton").addEventListener("click", function () {
+            const audio = document.getElementById("click-sound");
+            audio.play()
+            .then(() => {
+                console.log("Music is playing");
+            })
+            .catch(error => {
+                console.log("Error playing music: ", error);
+            });
+            });
             clickSound.play();
             createConfetti();
             const surprise = document.getElementById('surprise');
@@ -119,32 +134,36 @@
         }
 
         function checkFirstPassword() {
-            const password1 = document.getElementById('password1').value;
-            if (password1 === '16-01-2006') {
-                clickSound.play();
-                document.getElementById('password2').style.display = 'block';
-                document.getElementById('second-button').style.display = 'block';
-                alert('YEAYYY BERHASIL');
-                firstAttempt = 0;
-            } else {
-                firstAttempt++;
-                if (firstAttempt === 3) {
-                    document.getElementById('hint1').style.display = 'block';
-                } else {
-                    wrongSound.play();
-                    alert('Salah Tau Wle🥴 (Nanti Dapet Hint Kalau 3 kali Salah)');
-                }
-            }
+    const password1 = document.getElementById('password1').value;
+    const correctSound = document.getElementById('correct-sound');
+    const wrongSound = document.getElementById('wrong-sound');
+
+    if (password1 === '16-01-2006') {
+        correctSound.play();
+        document.getElementById('password2').style.display = 'block';
+        document.getElementById('second-button').style.display = 'block';
+        alert('YEAYYY BERHASIL');
+        firstAttempt = 0;
+    } else {
+        firstAttempt++;
+        if (firstAttempt === 3) {
+            document.getElementById('hint1').style.display = 'block';
+        } else {
+            wrongSound.play();
+            alert('Salah Tau Wle🥴 (Nanti Dapet Hint Kalau 3 kali Salah)');
         }
+    }
+}
+
 
         function checkSecondPassword() {
             const password2 = document.getElementById('password2').value;
             if (password2 === '23-09-2005') {
-                alert('YEAYY BERHASIL');
-                clickSound.play();
+                correctSound.play();
                 document.getElementById('photo-grid').style.display = 'grid';
                 document.getElementById('password-container').style.display = 'none';
                 document.getElementById('music').style.display = 'block';
+                alert('YEAYY BERHASIL');
                 const videoContainer = document.getElementById('video-container');
                  videoContainer.style.display = 'block';
                 secondAttempt = 0;
