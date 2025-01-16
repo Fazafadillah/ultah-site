@@ -33,16 +33,14 @@
         <p>Every moment with you is a treasure. Thank you for being you. Here’s to many more birthdays together! 🎂</p>
 
         <div class="password-container" id="password-container">
-            <p class="hint" id="hint1">Hint: Ulang Tahun Kamu! 🎉 [Formatnya Isian nya 00-00-0000 , Tanggal-Bulan-Tahun] </p>
+            <p class="hint" id="hint1">Hint: Ulang Tahun Kamu sayang zashkieya! 🎉 [Format Isiannya 00-00-0000 , Tanggal-Bulan-Tahun] </p>
             <input type="input" id="password1" placeholder="Enter first password">
             <button onclick="checkFirstPassword()">Submit First Password</button>
             <audio id="correct-sound" src="assets/bener.mp3"></audio>
             <audio id="wrong-sound" src="assets/salah.mp3"></audio>
 
 
-            <p class="hint" id="hint2" style="display:none;">Hint: Berpikir Tentang Ulang Tahun Seseorang 💕</p>
-            <p class="hint" id="hint3" style="display:none;">Hint: Yang Pernah Botak 👨🏻‍🦲 Terus Jalan. Awas Aja Gatau Keneh 💕</p>
-            <p class="hint" id="hint4" style="display:none;">Hint: Yaudah Deh Nih Passwordnya 23-09-2005</p>
+            <p class="hint" id="hint2" style="display:none;">Hint: Tanggal Lahir/Ulang Tahun Pacar Kamu [00-00-0000, Tanggal-Bulan-Tahun] 💕</p>
             <input type="input" id="password2" placeholder="Enter second password" style="display:none;">
             <button onclick="checkSecondPassword()" id="second-button" style="display:none;">Submit Second Password</button>
             <!-- <audio id="correct-sound" src="assets/bener.mp3"></audio>
@@ -146,11 +144,11 @@
         firstAttempt = 0;
     } else {
         firstAttempt++;
-        if (firstAttempt === 3) {
+        if (firstAttempt === 1) {
             document.getElementById('hint1').style.display = 'block';
         } else {
             wrongSound.play();
-            alert('Salah Tau Wle🥴 (Nanti Dapet Hint Kalau 3 kali Salah)');
+            alert('Salah Tau Wle🥴');
         }
     }
 }
@@ -171,11 +169,6 @@
                 secondAttempt++;
                 if (secondAttempt === 1) {
                     document.getElementById('hint2').style.display = 'block';
-                }if (secondAttempt === 2){
-                    document.getElementById('hint3').style.display = 'block';
-                }
-                if (secondAttempt === 3){
-                    document.getElementById('hint4').style.display = 'block';
                 }
                 else {
                     wrongSound.play();
